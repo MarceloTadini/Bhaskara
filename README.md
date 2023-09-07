@@ -9,10 +9,6 @@
 * Verificar se o delta é Real ou não;
 * Calcular o valor de X' e X'';
 
-### :pencil2: Diferenciais
-* Utilização de biblliotecas do NPM;
-* Utilização de React Hooks;
-
 ##  :video_game: Tecnologias Utilizadas 
 * HTML;
 * Css;
