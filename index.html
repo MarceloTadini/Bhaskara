@@ -21,8 +21,10 @@
                 <label for="c">C:</label>
                 <input type="number" id="c" required>
 
-                <button type="button" id="calcular">Calcular</button>
-                <button type="button" id="limpar">Limpar</button>
+                <div class="form-buttons">
+                    <button type="button" id="calcular">Calcular</button>
+                    <button type="button" id="limpar">Limpar</button>
+                </div>
             </form>
         </div>
         <div class="column">
@@ -30,37 +32,6 @@
             <p id="resultado"></p>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const calcularButton = document.getElementById('calcular');
-            const limparButton = document.getElementById('limpar');
-            const resultadoElement = document.getElementById('resultado');
-            const bhaskaraForm = document.getElementById('bhaskaraForm');
-
-            calcularButton.addEventListener('click', function () {
-                const a = parseFloat(document.getElementById('a').value);
-                const b = parseFloat(document.getElementById('b').value);
-                const c = parseFloat(document.getElementById('c').value);
-
-                const delta = b ** 2 - 4 * a * c;
-
-                if (isNaN(delta)) {
-                    resultadoElement.textContent = 'Preencha os campos corretamente.';
-                } else if (delta < 0) {
-                    resultadoElement.textContent = 'Delta é negativo, não há soluções reais.';
-                } else {
-                    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
-                    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
-
-                    resultadoElement.textContent = `X': ${x1.toFixed(2)}, X'': ${x2.toFixed(2)}`;
-                }
-            });
-
-            limparButton.addEventListener('click', function () {
-                bhaskaraForm.reset();
-                resultadoElement.textContent = '';
-            });
-        });
-    </script>
+    <script src="/calcula.js"></script>
 </body>
 </html>
